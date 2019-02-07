@@ -93,3 +93,33 @@ void DFS(int nod, int tata, int rad)
         /// nu va duce la neconexitatea sa
         if(nod == rad && nrFii > 1) C[rad] = 1;
 }
+
+
+///REZUMAT
+///DFS
+///  init niv, low -> 1 + niv[tata]
+///  push nod in coada
+///  parcurgere pe fii
+///     fiu != tata
+///         fiu vizitat -> muchie intoarcere
+///            update low[nod]
+///            continue
+///         verificare daca nodul curent e racacina
+///             pentru a adauga fiul la contor
+///         continuare dfs
+
+///         update low[nod]
+
+///         caz de neexistenta a muchiei de intoarcere adica muchie critica
+
+///         caz de probabila existenta a muchiei de intoarcere
+///             dar nod critic
+///             adaugare contor compBicon
+
+///             parcurgere pe stiva si adaugare in componenta
+
+///             adaugare nod critic in componenta
+
+///             daca nod e diferit de radacina
+///                  il notez ca punct de articulatie
+///  caz nod = radacina, trebuie sa aiba mai mult de un fiu             
